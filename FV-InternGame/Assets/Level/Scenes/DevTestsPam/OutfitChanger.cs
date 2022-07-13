@@ -53,7 +53,7 @@ public class OutfitChanger : MonoBehaviour
     
     public void Randomize()
     {
-        currOption = Random.Range(0, options.Count - 1);
+        currOption = Random.Range(0, options.Count);
         bodyPart.sprite = options[currOption];
         changeCarousel();
     }
