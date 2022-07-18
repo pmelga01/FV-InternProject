@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 1107066615}
   - component: {fileID: 1107066614}
   m_Layer: 0
-  m_Name: meter_color
+  m_Name: meter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 1489357856}
   - component: {fileID: 1489357855}
   m_Layer: 0
-  m_Name: needle_meter
+  m_Name: needle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

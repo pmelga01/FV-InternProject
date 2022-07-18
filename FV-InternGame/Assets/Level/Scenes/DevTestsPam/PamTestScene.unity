@@ -408,11 +408,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!212 &103546925 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 318209246517782631, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
-  m_PrefabInstance: {fileID: 533523164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &175101925
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,11 +484,6 @@ RectTransform:
   m_AnchoredPosition: {x: 124.900055, y: 23.591507}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!212 &180184474 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 318209240803975561, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
-  m_PrefabInstance: {fileID: 533523164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &212234897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 474453018161446303, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4237
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 475166029032277277, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
       propertyPath: m_Name
@@ -1309,7 +1299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae94b5616b79f04189013e9a783807c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyPart: {fileID: 180184474}
+  bodyPart: {fileID: 0}
   prev: {fileID: 1129968441}
   next: {fileID: 267421716}
   options:
@@ -1743,7 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae94b5616b79f04189013e9a783807c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyPart: {fileID: 103546925}
+  bodyPart: {fileID: 0}
   prev: {fileID: 22312911}
   next: {fileID: 1678637562}
   options:
