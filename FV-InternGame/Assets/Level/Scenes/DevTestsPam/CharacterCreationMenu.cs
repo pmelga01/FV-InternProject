@@ -29,7 +29,7 @@ public class CharacterCreationMenu : MonoBehaviour
     
     public void Submit()
     {
-        PrefabUtility.SaveAsPrefabAsset(character, "Assets/Level/Scenes/DevTestsPam/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Prefabs/Player.prefab");
-        SceneManager.LoadScene(1);
+        //PrefabUtility.SaveAsPrefabAsset(character, "Assets/Level/Scenes/DevTestsPam/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Prefabs/Player.prefab");
+        //SceneManager.LoadScene(1);
     }
 }

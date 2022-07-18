@@ -43,7 +43,7 @@ public class basketGame : MonoBehaviour
     void Update()
     {
         if (gameHandlerObj.tryCount <= 0) {
-            print("The Game has ENDED");
+            //print("The Game has ENDED");
             hasStopped = true;
             //ball.SetActive(false);
         } else {
@@ -53,9 +53,6 @@ public class basketGame : MonoBehaviour
                 determineColor(rZ);
             }
         }
-        
-        
-        
     }
     
     void FixedUpdate()
@@ -95,7 +92,7 @@ public class basketGame : MonoBehaviour
             }
             
         /* GREEN range*/
-        } else if( angle >= 76 && angle <= 102) {
+        } else if ( angle >= 76 && angle <= 102) {
             //print("Green!");
             animator.SetInteger("color", 3);
             incrementPoint();
