@@ -12,7 +12,8 @@ public class GameHandler : MonoBehaviour {
 
     void Start() 
     {
-        UpdateScore();
+        scoreT.text = "Points: " + scoreCount.ToString();
+        tryT.text = "Throws Left: " + tryCount.ToString();
     }
 
     public void AddScore(int points)
@@ -33,5 +34,6 @@ public class GameHandler : MonoBehaviour {
         yield return new WaitForSeconds(3);
         print("current score: " + scoreCount);
         scoreT.text = "Points: " + scoreCount.ToString();
+        tryT.text = "Throws Left: " + tryCount.ToString();
     }
 }

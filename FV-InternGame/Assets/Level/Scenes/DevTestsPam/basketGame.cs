@@ -5,6 +5,10 @@ using UnityEngine;
 public class basketGame : MonoBehaviour
 {
     public GameHandler gameHandlerObj;
+    public AudioSource hoop;
+    public AudioClip green;
+    public AudioClip yellow;
+    public AudioClip red;
     
     private GameObject needle;
     private GameObject meter;
@@ -73,6 +77,7 @@ public class basketGame : MonoBehaviour
             //print("Red!");
             animator.SetInteger("color", 1);
             StartCoroutine(resetAnimation());
+            StartCoroutine(delayAudio("red"));
             nextTurn();
         /* YELLOW range */
         } else if ( (angle >= 27 && angle < 76) || (angle > 102) && (angle <= 152) ) {
@@ -81,10 +86,12 @@ public class basketGame : MonoBehaviour
                 //set to green
                 animator.SetInteger("color", 3);
                 StartCoroutine(resetAnimation());
+                StartCoroutine(delayAudio("green"));
             } else {
                 //missed the lucky shot
                 animator.SetInteger("color", 2);
                 StartCoroutine(resetAnimation());
+                StartCoroutine(delayAudio("yellow"));
             }
             
         /* GREEN range*/
@@ -93,6 +100,7 @@ public class basketGame : MonoBehaviour
             animator.SetInteger("color", 3);
             incrementPoint();
             StartCoroutine(resetAnimation());
+            StartCoroutine(delayAudio("green"));
         } else {
             print("ERROR: Unknown Color");
         }
@@ -103,6 +111,20 @@ public class basketGame : MonoBehaviour
         yield return new WaitForSeconds(4);
         animator.SetInteger("color", 0);
         hasStopped = false;
+    }
+    
+    IEnumerator delayAudio(string color)
+    {
+        yield return new WaitForSeconds(1f);
+        if (color == "red") {
+            hoop.PlayOneShot(red, 1f);
+        } else if (color == "yellow") {
+            hoop.PlayOneShot(yellow, 1f);
+        } else if (color == "green") {
+            hoop.PlayOneShot(green, 1f);
+        } else {
+            print("unknown color");
+        }
     }
     
     bool luckyShot()
