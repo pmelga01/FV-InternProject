@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class basketGame : MonoBehaviour
 {
+    public GameHandler gameHandlerObj;
+    
     private GameObject needle;
     private GameObject meter;
     private GameObject ball;
@@ -17,12 +18,6 @@ public class basketGame : MonoBehaviour
     private bool hasStopped = false;
     private Animator animator;
     
-    //UI
-    public int pointsCount = 0;
-    public int throwsCount;
-    public GameObject pointsText;
-    public GameObject throwsText;
-     
     // Start is called before the first frame update
     
     void Awake()
@@ -35,20 +30,28 @@ public class basketGame : MonoBehaviour
     
     void Start()
     {
+        if (GameObject.FindWithTag("GameController") != null){
+              gameHandlerObj = GameObject.FindWithTag("GameController").GetComponent<GameHandler>();
+         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space") && !hasStopped && throwsCount > 0) {
-            print("space bar was pressed");
+        if (gameHandlerObj.tryCount <= 0) {
+            print("The Game has ENDED");
             hasStopped = true;
-            determineColor(rZ);
+            //ball.SetActive(false);
+        } else {
+            if (Input.GetKeyDown("space") && !hasStopped) {
+                print("space bar was pressed");
+                hasStopped = true;
+                determineColor(rZ);
+            }
         }
         
-        if (throwsCount == 0) {
-            print("The Game has ENDED");
-        }
+        
+        
     }
     
     void FixedUpdate()
@@ -122,17 +125,12 @@ public class basketGame : MonoBehaviour
     
     void incrementPoint()
     {
-        //increast UI points
-        pointsCount++;
-        Text pointsTextB = pointsText.GetComponent<Text>();
-        pointsTextB.text = "Points: " + pointsCount;
+        gameHandlerObj.AddScore(1);
         nextTurn();
     }
     
     void nextTurn()
     {
-        throwsCount--;
-        Text throwsTextB = throwsText.GetComponent<Text>();
-        throwsTextB.text = "Num Tries: " + throwsCount;
+        gameHandlerObj.DecrementTries();
     }
 }
