@@ -29,4 +29,9 @@ public class StartMenu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    
+    public void AvatarCreator()
+    {
+        SceneManager.LoadScene(2);
+    }
 }

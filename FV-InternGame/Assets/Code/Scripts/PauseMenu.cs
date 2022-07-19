@@ -47,15 +47,15 @@ public class PauseMenu : MonoBehaviour  {
                 }
         }
 
-        void Pause()
-        {
-                meter.SetActive(false);
-                needle.SetActive(false);
-                ball.SetActive(false);
-                pauseMenuUI.SetActive(true);
-                Time.timeScale = 0f;
-                GameisPaused = true;
-        }
+    void Pause()
+    {
+        meter.SetActive(false);
+        needle.SetActive(false);
+        ball.SetActive(false);
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        GameisPaused = true;
+    }
 
         public void Resume()
         {

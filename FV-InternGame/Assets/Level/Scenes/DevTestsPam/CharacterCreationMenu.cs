@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.SceneManagement;
@@ -29,7 +30,18 @@ public class CharacterCreationMenu : MonoBehaviour
     
     public void Submit()
     {
-        //PrefabUtility.SaveAsPrefabAsset(character, "Assets/Level/Scenes/DevTestsPam/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Prefabs/Player.prefab");
-        //SceneManager.LoadScene(1);
+        #if UNITY_EDITOR
+        bool prefabSuccess;
+        PrefabUtility.SaveAsPrefabAssetAndConnect(character, "Assets/Level/Scenes/DevTestsPam/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Prefabs/Player.prefab", InteractionMode.UserAction, out prefabSuccess);
+        if (prefabSuccess == true)
+                Debug.Log("Prefab was saved successfully");
+            else
+                Debug.Log("Prefab failed to save" + prefabSuccess);
+        SceneManager.LoadScene(3);
+        
+        #else
+        Application.Quit();
+        #endif
+        
     }
 }
