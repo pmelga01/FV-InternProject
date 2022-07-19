@@ -265,6 +265,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 437886134379778675, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 437886134959349039, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 474453017908034681, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -325,22 +333,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 475166027469081385, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 475166029032277277, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
---- !u!212 &533523165 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 318209240803975561, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
-  m_PrefabInstance: {fileID: 533523164}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &533523166 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 318209246517782631, guid: 83f685dc1e50214428ea68b877fc6e9a, type: 3}
-  m_PrefabInstance: {fileID: 533523164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &575444687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,7 +1299,7 @@ PrefabInstance:
     - target: {fileID: 2582866796106598366, guid: c5d4c218a3233234e86a25fc96f8d417, type: 3}
       propertyPath: bodyPart
       value: 
-      objectReference: {fileID: 533523166}
+      objectReference: {fileID: 0}
     - target: {fileID: 2582866797376505389, guid: c5d4c218a3233234e86a25fc96f8d417, type: 3}
       propertyPath: bodyPart
       value: 
@@ -1305,6 +1307,6 @@ PrefabInstance:
     - target: {fileID: 2582866797568530447, guid: c5d4c218a3233234e86a25fc96f8d417, type: 3}
       propertyPath: bodyPart
       value: 
-      objectReference: {fileID: 533523165}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5d4c218a3233234e86a25fc96f8d417, type: 3}

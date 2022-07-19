@@ -13,6 +13,10 @@ public class OutfitChanger : MonoBehaviour
     //Sprites to cycle through
     public List<Sprite> options = new List<Sprite>();
     
+    
+    // save data on a gameobject that has "do not destory on load"
+    // static variable for option num
+    // singleton class
     private int currOption = 0;
     // Start is called before the first frame update
     void Start()

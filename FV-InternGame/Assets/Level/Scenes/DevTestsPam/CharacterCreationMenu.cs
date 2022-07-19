@@ -30,6 +30,10 @@ public class CharacterCreationMenu : MonoBehaviour
     
     public void Submit()
     {
+        //different way to save the character 
+        // use Scriptible Object 
+        // PLayer prefs
+        
         #if UNITY_EDITOR
         bool prefabSuccess;
         PrefabUtility.SaveAsPrefabAssetAndConnect(character, "Assets/Level/Scenes/DevTestsPam/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Prefabs/Player.prefab", InteractionMode.UserAction, out prefabSuccess);
