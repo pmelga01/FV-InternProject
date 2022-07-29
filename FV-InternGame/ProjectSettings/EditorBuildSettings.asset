@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Level/Scenes/DevTestsPam/MainMenu.unity
+    path: Assets/Level/Scenes/MainMenu.unity
     guid: 9a016d44efcecec4fab553ef800bdec5
   - enabled: 1
     path: Assets/Level/Scenes/DevTestsPam/PamTest_basketball.unity
