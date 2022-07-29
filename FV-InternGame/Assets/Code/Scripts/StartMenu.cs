@@ -27,11 +27,11 @@ public class StartMenu : MonoBehaviour
     
     public void StartGame() 
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Scene1a");
     }
     
     public void AvatarCreator()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("AvatarCreationStart_test");
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class basketGame : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class basketGame : MonoBehaviour
             //print("The Game has ENDED");
             hasStopped = true;
             //ball.SetActive(false);
+            SceneManager.LoadScene("Scene6a");
         } else {
             if (Input.GetKeyDown("space") && !hasStopped) {
                 print("space bar was pressed");

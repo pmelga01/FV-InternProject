@@ -41,10 +41,10 @@ public class CharacterCreationMenu : MonoBehaviour
                 Debug.Log("Prefab was saved successfully");
             else
                 Debug.Log("Prefab failed to save" + prefabSuccess);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("MainMenu");
         
         #else
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
         #endif
         
     }
