@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour {
     
@@ -35,5 +36,9 @@ public class GameHandler : MonoBehaviour {
         print("current score: " + scoreCount);
         scoreT.text = "Points: " + scoreCount.ToString();
         tryT.text = "Throws Left: " + tryCount.ToString();
+        
+        if (tryCount <= 0) {
+            SceneManager.LoadScene("Scene6a");
+        }
     }
 }
