@@ -55,13 +55,19 @@ public void talking()
         }
         else if (primeInt == 2){
                //ArtChar1.SetActive(true);
-                // DialogueDisplay.SetActive(true);
-                // Char1name.text = "Jeda";
-                // Char1speech.text = "Wakey wakey, human.";
-                // Char2name.text = "";
-                // Char2speech.text = "";
-                NextScene1Button.SetActive(true);
-                nextButton.SetActive(false);
+                DialogueDisplay.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "What a hard quiz, be proud of you for taking care of yourself and trying your best!";
+        }
+        else if (primeInt == 3) {
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char2name.text = "";
+            Char2speech.text = "Good thing you had that energizing breakfast this morning!";
+            NextScene1Button.SetActive(true);
+            nextButton.SetActive(false);
         }
        
 }
@@ -91,9 +97,9 @@ public void talking()
         }
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene4a");
+               SceneManager.LoadScene("Scene4b");
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene4a");
+                SceneManager.LoadScene("Scene4b");
         }
 }

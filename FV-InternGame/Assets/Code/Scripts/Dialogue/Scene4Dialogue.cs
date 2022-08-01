@@ -102,13 +102,13 @@ public void talking(){         // main story function. Players hit next to progr
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "~ IMAGERY ~";
-            Char2speech.text = "You take a deep breath and think about a calming environment. Ocean waves fill your mind, the sound of seagulls echo, and crashing waves tumble down the shore. You think about the feeling of sunlight on your skin, of warmth, of sand getting stuck between your toes.";
+            Char2speech.text = "You take a deep breath and think about a calming environment. Ocean waves fill your mind, the sound of seagulls echo, and crashing waves tumble down the shore. ";
         }
         else if (primeInt == 10) {
             Char1name.text = "";
             Char1speech.text = "";
             Char2name.text = "~ IMAGERY ~";
-            Char2speech.text = "You breathe out. You are safe.";
+            Char2speech.text = "You think about the feeling of sunlight on your skin, of warmth, of sand getting stuck between your toes... You breathe out. You are safe.";
         }
         else if (primeInt == 11) {
             Char1name.text = "";
@@ -255,9 +255,9 @@ public void talking(){         // main story function. Players hit next to progr
 
         public void SceneChange1(){
             //hallway scene
-               SceneManager.LoadScene("Scene3a");
+               SceneManager.LoadScene("Scene4a");
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene3a");
+                SceneManager.LoadScene("Scene4a");
         }
 }
