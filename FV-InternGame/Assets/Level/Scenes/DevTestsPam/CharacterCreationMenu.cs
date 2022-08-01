@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEditor;
-using UnityEngine.SceneManagement;
 
 public class CharacterCreationMenu : MonoBehaviour
 {
@@ -34,18 +33,7 @@ public class CharacterCreationMenu : MonoBehaviour
         // use Scriptible Object 
         // PLayer prefs
         
-        #if UNITY_EDITOR
-        bool prefabSuccess;
-        PrefabUtility.SaveAsPrefabAssetAndConnect(character, "Assets/Level/Scenes/DevTestsPam/Mighty Heroes (Rogue) 2D Fantasy Characters Pack/Prefabs/Player.prefab", InteractionMode.UserAction, out prefabSuccess);
-        if (prefabSuccess == true)
-                Debug.Log("Prefab was saved successfully");
-            else
-                Debug.Log("Prefab failed to save" + prefabSuccess);
-        SceneManager.LoadScene("MainMenu");
-        
-        #else
-        SceneManager.LoadScene("MainMenu");
-        #endif
+        //save the changes somehow, scene changes taken care of in another script
         
     }
 }

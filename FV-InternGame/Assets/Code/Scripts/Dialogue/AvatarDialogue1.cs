@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using TMPro;
 
-public class Scene1Dialogue : MonoBehaviour {
+public class AvatarDialogue1 : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public TextMeshProUGUI Char1name;
         public TextMeshProUGUI Char1speech;
@@ -18,21 +18,20 @@ public class Scene1Dialogue : MonoBehaviour {
         public GameObject ArtChar1;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
-        public GameObject Choice1a;
-        public GameObject Choice1b;
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
+        public GameObject characterCreationMenu;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
+        public bool hasMadeAChange = false;
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
+        characterCreationMenu.SetActive(false);
         ArtChar1.SetActive(false);
         ArtBG1.SetActive(true);
-        Choice1a.SetActive(false);
-        Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
@@ -44,47 +43,65 @@ void Update(){         // use spacebar as Next button
                        talking();
                 }
         }
+        if (hasMadeAChange) {
+            nextButton.SetActive(true);
+        }
    }
 
 //Story Units:
 public void talking(){         // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
-        if (primeInt == 1){
+        if (primeInt == 1) {
                 // AudioSource.Play();
         }
-        else if (primeInt == 2){
+        else if (primeInt == 2) {
                //ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
-                Char1speech.text = "Good morning friend! Welcome to Aplomb Adventures! ";
+                Char1speech.text = "Select all the options that feel the best for you!";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-       else if (primeInt ==3){
+       else if (primeInt == 3) {
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
-                Char2speech.text = "Today we’re going to learn and practice some skills that will help you improve your confidence inside and out!";
+                Char2speech.text = "";
+                DialogueDisplay.SetActive(false);
+                nextButton.SetActive(false);
+                ArtBG1.SetActive(false);
+                allowSpace = false;
+                
+                characterCreationMenu.SetActive(true);
+                
                 //gameHandler.AddPlayerStat(1);
         }
-       else if (primeInt == 4){
+       else if (primeInt == 4) {
+                hasMadeAChange = false;
                 Char1name.text = "";
-                Char1speech.text = "Let’s go customize your character and get ready for the day!";
+                Char1speech.text = "Nice fit, you look awesome! Let’s go get some breakfast before we head off to school";
                 Char2name.text = "";
                 Char2speech.text = "";
-                //Turn off "Next" button, turn on Scene Change button to Avatar Creator
+                
+                
                 nextButton.SetActive(false);
+                characterCreationMenu.SetActive(false);
                 allowSpace = false;
+                
+                DialogueDisplay.SetActive(true);
                 NextScene1Button.SetActive(true);
         }
     }
      
 
-    public void SceneChange1(){
-           SceneManager.LoadScene("AvatarCreationStart_test");
-    }
-    public void SceneChange2(){
-            SceneManager.LoadScene("Scene2a");
-    }
-    
+        public void SceneChange1(){
+               SceneManager.LoadScene("Scene2a");
+        }
+        public void SceneChange2(){
+                SceneManager.LoadScene("Scene2a");
+        }
+        
+        public void playerCanSubmit() {
+            hasMadeAChange = true;
+        }
 }
