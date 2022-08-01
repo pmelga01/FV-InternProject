@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/Minigames/Minigame_Breakfast.unity
     guid: 9756f2d62f6bec74e87a3df2a9d41e11
+  - enabled: 1
+    path: Assets/Level/Scenes/Scene4b.unity
+    guid: d59400330b11548449973c37f032e6ba
+  - enabled: 1
+    path: Assets/Level/Scenes/Scene2.unity
+    guid: 41840933e29505e4585af24a1c846a35
   m_configObjects: {}
