@@ -77,6 +77,7 @@ public class basketGame : MonoBehaviour
             StartCoroutine(resetAnimation());
             StartCoroutine(delayAudio("red"));
             nextTurn();
+            
         /* YELLOW range */
         } else if ( (angle >= 27 && angle < 76) || (angle > 102) && (angle <= 152) ) {
             //print("Yellow!");

@@ -28,7 +28,7 @@ public class GameHandler : MonoBehaviour {
         tryCount--;
         print("try count: " + tryCount);
         tryT.text = "Throws Left: " + tryCount.ToString();
-        UpdateScore();
+        StartCoroutine(UpdateScore());
     }
 
     IEnumerator UpdateScore() {
