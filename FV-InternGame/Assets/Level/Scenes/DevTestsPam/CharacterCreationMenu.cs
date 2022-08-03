@@ -6,6 +6,9 @@ using UnityEditor;
 
 public class CharacterCreationMenu : MonoBehaviour
 {
+    [SerializeField] 
+    private CharacterArtScriptableObject playerArt;
+    public AvatarController avatarController;
     public List<OutfitChanger> outfitChangers = new List<OutfitChanger>();
     public GameObject character;
     // Start is called before the first frame update
@@ -20,11 +23,20 @@ public class CharacterCreationMenu : MonoBehaviour
         
     }
     
+    public void updateArtChoice()
+    {
+        
+        avatarController.updateCharacterArt();
+    }
+    
+    
     public void RandomizeCharacter()
     {
         foreach(OutfitChanger changer in outfitChangers) {
             changer.Randomize();
         }
+        
+        updateArtChoice();
     }
     
     public void Submit()

@@ -1279,6 +1279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 613203665}
+  - component: {fileID: 613203666}
   m_Layer: 0
   m_Name: Character_art
   m_TagString: Untagged
@@ -1304,6 +1305,27 @@ Transform:
   m_Father: {fileID: 1678385950}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &613203666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613203664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c094f427221704bad4168e0c8fe806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerArt: {fileID: 11400000, guid: 21b72ab4295b0a2419a2915d92d89ccf, type: 2}
+  head: {fileID: 1963835970}
+  eyes: {fileID: 1624893199}
+  arms: {fileID: 903889481}
+  shirt: {fileID: 782074714}
+  pants: {fileID: 1540654456}
+  frontHair: {fileID: 1469866797}
+  backHair: {fileID: 928044212}
+  addOns: {fileID: 1369263306}
 --- !u!1 &627934323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3401,6 +3423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1c1c200d5d2ec4cbfbe15fd3c5ae38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerArt: {fileID: 0}
+  avatarController: {fileID: 0}
   outfitChangers:
   - {fileID: 1073300364}
   - {fileID: 1143702143}
