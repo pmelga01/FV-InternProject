@@ -70,8 +70,8 @@ MonoBehaviour:
   - {r: 0.8705883, g: 0.40000004, b: 0.38823533, a: 0}
   - {r: 0.93725497, g: 0.64705884, b: 0.72156864, a: 0}
   - {r: 0.77647066, g: 0.81568635, b: 0.882353, a: 0}
-  frontHairChoice: 0
-  backHairChoice: 0
+  frontHairChoice: 3
+  backHairChoice: 1
   hairColorChoice: 0
   shirtColor:
   - {r: 0.82745105, g: 0.47058827, b: 0.22352943, a: 0}

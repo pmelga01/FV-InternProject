@@ -58,4 +58,5 @@ public class AvatarController : MonoBehaviour
         backHair.color = playerArt.getHairColor;
         addOns.sprite = playerArt.getAccessories;
     }
+    
 }

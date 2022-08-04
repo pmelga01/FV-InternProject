@@ -1602,6 +1602,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a9818c159986e8145b8353349af4be19, type: 3}
   - {fileID: 21300000, guid: 8006bb893d0269341b0f0e1b7104a42b, type: 3}
   - {fileID: 21300000, guid: ddf9e28b31a70f544836fc610c65a952, type: 3}
+  currOption: 0
 --- !u!1 &782074712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,6 +2461,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2a3dc40ed475d884fb842bb7fbf702fd, type: 3}
   - {fileID: 21300000, guid: d5db8486be298c44ca167c21b46ad9f0, type: 3}
   - {fileID: 21300000, guid: 2c588fd42cf16284787187a34243a281, type: 3}
+  currOption: 0
 --- !u!1 &1087295131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,6 +2728,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ce18295d3d0fe884d9540c19700539f0, type: 3}
   - {fileID: 21300000, guid: e59b60fefabe6414d9a2c25ff86adef6, type: 3}
   - {fileID: 21300000, guid: 603acec0561f20f43b31c52e8b5e4a55, type: 3}
+  currOption: 0
 --- !u!1 &1208957133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3423,13 +3426,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1c1c200d5d2ec4cbfbe15fd3c5ae38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerArt: {fileID: 0}
-  avatarController: {fileID: 0}
+  playerArt: {fileID: 11400000, guid: 21b72ab4295b0a2419a2915d92d89ccf, type: 2}
+  avatarController: {fileID: 613203666}
   outfitChangers:
   - {fileID: 1073300364}
   - {fileID: 1143702143}
   - {fileID: 721903022}
-  character: {fileID: 0}
+  bodyChoiceNum: {fileID: 721903022}
+  frontHairNum: {fileID: 1073300364}
+  backHairNum: {fileID: 1143702143}
 --- !u!1 &1469866795
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,7 +4202,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 95, y: 40}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 28.8, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1684167965
 GameObject:
