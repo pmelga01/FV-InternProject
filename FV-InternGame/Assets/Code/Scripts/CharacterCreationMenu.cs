@@ -16,12 +16,14 @@ public class CharacterCreationMenu : MonoBehaviour
     public OutfitChanger bodyChoiceNum;
     public OutfitChangerEyes eyeColorNum;
     
-    //public OutfitChanger frontHairNum;
-    //public OutfitChanger backHairNum;
-    //public OutfitChanger hairColorNum;
-    //public OutfitChanger shirtColorNum;
-    //public OutfitChanger pantsColorNum;
-    //public OutfitChanger accessoryNum;
+    public OutfitChanger frontHairNum;
+    public OutfitChanger backHairNum;
+    public OutfitChangerFace hairColorNum;
+    
+    public OutfitChangerFace shirtColorNum;
+    public OutfitChangerFace pantsColorNum;
+    public OutfitChanger accessoryNum;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +40,13 @@ public class CharacterCreationMenu : MonoBehaviour
         playerArt.skinChoice = skinColorNum.currOption;
         playerArt.bodyChoice = bodyChoiceNum.currOption;
         playerArt.eyeColorChoice = eyeColorNum.currOption;
-        //playerArt.frontHairChoice = frontHairNum.currOption;
-        //playerArt.backHairChoice = backHairNum.currOption;
-        //playerArt.shirtColorChoice = shirtColorNum.currOption;
-        //playerArt.pantsColorChoice = pantsColorNum.currOption;
-        //playerArt.accessoryChoice = accessoryNum.currOption;
+        playerArt.frontHairChoice = frontHairNum.currOption;
+        playerArt.backHairChoice = backHairNum.currOption;
+        playerArt.hairColorChoice = hairColorNum.currOption;
+        
+        playerArt.shirtColorChoice = shirtColorNum.currOption;
+        playerArt.pantsColorChoice = pantsColorNum.currOption;
+        playerArt.accessoryChoice = accessoryNum.currOption;
         
         avatarController.updateCharacterArt();
     }

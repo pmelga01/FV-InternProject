@@ -22,6 +22,20 @@ public class AvatarDialogue1 : MonoBehaviour {
         public GameObject NextScene2Button;
         public GameObject nextButton;
         public GameObject characterCreationMenu;
+        
+        
+        //menus toggles
+        public GameObject skinColor;
+        public GameObject bodyChoice;
+        public GameObject eyeColor;
+    
+        public GameObject frontHair;
+        public GameObject backHair;
+        public GameObject hairColor;
+        
+        public GameObject shirtColor;
+        public GameObject pantsColor;
+        public GameObject accessory;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
@@ -35,6 +49,14 @@ void Start(){         // initial visibility settings
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+        
+        //make sure all the menus start out as hidden
+        skinColor.SetActive(false);
+        bodyChoice.SetActive(false);
+        eyeColor.SetActive(false);
+        frontHair.SetActive(false);
+        backHair.SetActive(false);
+        hairColor.SetActive(false);
    }
 
 void Update(){         // use spacebar as Next button
@@ -73,10 +95,63 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = false;
                 
                 characterCreationMenu.SetActive(true);
+                skinColor.SetActive(true);
+                bodyChoice.SetActive(true);
+                eyeColor.SetActive(true);
+                frontHair.SetActive(false);
+                backHair.SetActive(false);
+                hairColor.SetActive(false);
+                shirtColor.SetActive(false);
+                pantsColor.SetActive(false);
+                accessory.SetActive(false);
                 
                 //gameHandler.AddPlayerStat(1);
         }
-       else if (primeInt == 4) {
+        else if (primeInt == 4) {
+                 Char1name.text = "";
+                 Char1speech.text = "";
+                 Char2name.text = "";
+                 Char2speech.text = "";
+                 DialogueDisplay.SetActive(false);
+                 nextButton.SetActive(false);
+                 allowSpace = false;
+                 
+                 characterCreationMenu.SetActive(true);
+                 skinColor.SetActive(false);
+                 bodyChoice.SetActive(false);
+                 eyeColor.SetActive(false);
+                 frontHair.SetActive(true);
+                 backHair.SetActive(true);
+                 hairColor.SetActive(true);
+                 shirtColor.SetActive(false);
+                 pantsColor.SetActive(false);
+                 accessory.SetActive(false);
+                 
+                 //gameHandler.AddPlayerStat(1);
+         }
+         else if (primeInt == 5) {
+                  Char1name.text = "";
+                  Char1speech.text = "";
+                  Char2name.text = "";
+                  Char2speech.text = "";
+                  DialogueDisplay.SetActive(false);
+                  nextButton.SetActive(false);
+                  allowSpace = false;
+                  
+                  characterCreationMenu.SetActive(true);
+                  skinColor.SetActive(false);
+                  bodyChoice.SetActive(false);
+                  eyeColor.SetActive(false);
+                  frontHair.SetActive(false);
+                  backHair.SetActive(false);
+                  hairColor.SetActive(false);
+                  shirtColor.SetActive(true);
+                  pantsColor.SetActive(true);
+                  accessory.SetActive(true);
+                  
+                  //gameHandler.AddPlayerStat(1);
+          }
+         else if (primeInt == 6) {
                 hasMadeAChange = false;
                 Char1name.text = "";
                 Char1speech.text = "Nice fit, you look awesome! Let’s go get some breakfast before we head off to school";
