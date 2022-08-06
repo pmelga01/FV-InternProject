@@ -12,11 +12,12 @@ public class CharacterCreationMenu : MonoBehaviour
     public AvatarController avatarController;
     public List<OutfitChanger> outfitChangers = new List<OutfitChanger>();
     
-    //public OutfitChanger skinColorNum;
+    public OutfitChangerFace skinColorNum;
     public OutfitChanger bodyChoiceNum;
-    //ublic OutfitChanger eyeColorNum;
-    public OutfitChanger frontHairNum;
-    public OutfitChanger backHairNum;
+    public OutfitChangerEyes eyeColorNum;
+    
+    //public OutfitChanger frontHairNum;
+    //public OutfitChanger backHairNum;
     //public OutfitChanger hairColorNum;
     //public OutfitChanger shirtColorNum;
     //public OutfitChanger pantsColorNum;
@@ -34,11 +35,11 @@ public class CharacterCreationMenu : MonoBehaviour
     
     public void updateArtChoice()
     {
-        //playerArt.skinChoice = skinColorNum.currOption;
+        playerArt.skinChoice = skinColorNum.currOption;
         playerArt.bodyChoice = bodyChoiceNum.currOption;
-        //playerArt.eyeColorChoice = eyeColorNum.currOption;
-        playerArt.frontHairChoice = frontHairNum.currOption;
-        playerArt.backHairChoice = backHairNum.currOption;
+        playerArt.eyeColorChoice = eyeColorNum.currOption;
+        //playerArt.frontHairChoice = frontHairNum.currOption;
+        //playerArt.backHairChoice = backHairNum.currOption;
         //playerArt.shirtColorChoice = shirtColorNum.currOption;
         //playerArt.pantsColorChoice = pantsColorNum.currOption;
         //playerArt.accessoryChoice = accessoryNum.currOption;
