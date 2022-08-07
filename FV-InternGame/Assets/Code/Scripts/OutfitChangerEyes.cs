@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OutfitChanger : MonoBehaviour
+public class OutfitChangerEyes : MonoBehaviour
 {
     //References the sprite to change
-    public SpriteRenderer bodyPart;
+    public SpriteRenderer bodyPartFace;
     public Image prev;
     public Image next;
     
     //Sprites to cycle through
     public List<Sprite> options = new List<Sprite>();
+    public List<Color> colorOptions = new List<Color>();
     
     
     // save data on a gameobject that has "do not destory on load"
@@ -39,7 +40,7 @@ public class OutfitChanger : MonoBehaviour
             currOption = 0;
         } 
         
-        bodyPart.sprite = options[currOption];
+        bodyPartFace.color = colorOptions[currOption];
         changeCarousel();
     }
     
@@ -51,14 +52,14 @@ public class OutfitChanger : MonoBehaviour
             currOption = options.Count - 1;
         }
         
-        bodyPart.sprite = options[currOption];
+        bodyPartFace.color = colorOptions[currOption];
         changeCarousel();
     }
     
     public void Randomize()
     {
         currOption = Random.Range(0, options.Count);
-        //bodyPart.sprite = options[currOption];
+        bodyPartFace.color = colorOptions[currOption];
         changeCarousel();
     }
     

@@ -7,6 +7,7 @@ public class AvatarController : MonoBehaviour
     [SerializeField]
     private CharacterArtScriptableObject playerArt;
     /* Screen1  */
+    
         // skin color
     public SpriteRenderer head;
     public SpriteRenderer eyes;
@@ -28,12 +29,6 @@ public class AvatarController : MonoBehaviour
         updateCharacterArt();
     }
     
-    //how do i keep the most up to date NUMBER choice for the Character
-       //during the game 
-       //and during the selection
-       
-    //we're updating the choices based on the carousel selection.
-        // outfitchanger: currOption
     
     
     // Update is called once per frame
@@ -45,9 +40,12 @@ public class AvatarController : MonoBehaviour
     public void updateCharacterArt()
     {
         head.color = playerArt.getSkinColor;
-        eyes.color = playerArt.getEyeColor;
-        arms.sprite = playerArt.getBodyTypeArms;
         arms.color = playerArt.getSkinColor;
+        eyes.color = playerArt.getEyeColor;
+        
+        arms.sprite = playerArt.getBodyTypeArms;
+        pants.sprite = playerArt.getBodyTypeBottom;
+        
         shirt.sprite = playerArt.getBodyTypeTorso;
         shirt.color = playerArt.getShirtColor;
         pants.sprite = playerArt.getBodyTypeBottom;
