@@ -53,7 +53,7 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               //ArtChar1.SetActive(true);
+                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "MR. DAVIS";
                 Char1speech.text = "All right, friends! Time for gym class!";
