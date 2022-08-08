@@ -12,11 +12,13 @@ public class Scene4Dialogue : MonoBehaviour {
         public TextMeshProUGUI Char1speech;
         public TextMeshProUGUI Char2name;
         public TextMeshProUGUI Char2speech;
+        public GameObject mainCharacter;
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
-       //public GameObject ArtChar2;
+        public GameObject ArtChar2;
+        
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
@@ -30,12 +32,14 @@ public class Scene4Dialogue : MonoBehaviour {
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
         ArtChar1.SetActive(false);
+        ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+        mainCharacter.SetActive(false);
    }
 
 void Update(){         // use spacebar as Next button
@@ -55,12 +59,15 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                //ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
+                ArtChar1.SetActive(true);
                 Char1name.text = "MR. DAVIS";
                 Char1speech.text = "Good morning everyone! I hope you all did the math homework last night because it’s time for a pop quiz!";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 3){
+                ArtChar1.SetActive(false);
+                mainCharacter.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -68,6 +75,8 @@ public void talking(){         // main story function. Players hit next to progr
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
+                mainCharacter.SetActive(false);
+                ArtChar2.SetActive(true);
                 Char1name.text = "CONSTANCE";
                 Char1speech.text = "Thank goodness I did it all! This will be a piece of cake.";
                 Char2name.text = "";
@@ -81,6 +90,8 @@ public void talking(){         // main story function. Players hit next to progr
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
+                ArtChar2.SetActive(false);
+                mainCharacter.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
