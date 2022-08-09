@@ -43,9 +43,9 @@ MonoBehaviour:
   - {r: 0.8705883, g: 0.40000004, b: 0.38823533, a: 1}
   - {r: 0.93725497, g: 0.64705884, b: 0.72156864, a: 1}
   - {r: 0.77647066, g: 0.81568635, b: 0.882353, a: 1}
-  skinChoice: 1
-  bodyChoice: 0
-  eyeColorChoice: 7
+  skinChoice: 2
+  bodyChoice: 2
+  eyeColorChoice: 2
   frontHair:
   - {fileID: 21300000, guid: fe7d62281563e764f83eb0079ff6ec00, type: 3}
   - {fileID: 21300000, guid: 49b3f9e8bd7e9fc448187e4861311d28, type: 3}
@@ -53,13 +53,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2a3dc40ed475d884fb842bb7fbf702fd, type: 3}
   - {fileID: 21300000, guid: d5db8486be298c44ca167c21b46ad9f0, type: 3}
   - {fileID: 21300000, guid: 2c588fd42cf16284787187a34243a281, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 7f840d8a1894f0341a9b6cdf6cfee1da, type: 3}
   backHair:
   - {fileID: 21300000, guid: 1e626aa39f98c7549909f6e36ea9df82, type: 3}
   - {fileID: 21300000, guid: ce18295d3d0fe884d9540c19700539f0, type: 3}
   - {fileID: 21300000, guid: e59b60fefabe6414d9a2c25ff86adef6, type: 3}
   - {fileID: 21300000, guid: 603acec0561f20f43b31c52e8b5e4a55, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 7f840d8a1894f0341a9b6cdf6cfee1da, type: 3}
   hairColor:
   - {r: 0.82745105, g: 0.47058827, b: 0.22352943, a: 1}
   - {r: 0.9490197, g: 0.8470589, b: 0.5058824, a: 1}
@@ -98,7 +98,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0f3698b3c3744d0429f74d549d9a709a, type: 3}
   - {fileID: 21300000, guid: 5ce35840307cd9d408b9ffc2716bfa8b, type: 3}
   - {fileID: 21300000, guid: 573160184e5e8a644abf8a015583b410, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 7f840d8a1894f0341a9b6cdf6cfee1da, type: 3}
   shirtColorChoice: 0
   pantsColorChoice: 0
   accessoryChoice: 0

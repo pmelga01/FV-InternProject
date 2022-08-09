@@ -29,6 +29,10 @@ public class AvatarController : MonoBehaviour
         updateCharacterArt();
     }
     
+    void Awake()
+    {
+        updateCharacterArt();
+    }
     
     
     // Update is called once per frame
